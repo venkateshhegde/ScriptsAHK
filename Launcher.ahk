@@ -99,7 +99,35 @@ if (Length > 0)
 		Send, gitbash
 		Send, {ENTER}
 		Sleep, 100
-		TrayTip, "VenControl", "Classroom..", 5, 1
+		TrayTip, "VenControl", "Git Bash..", 5, 1
+
+	}
+	if (MyEdit = "gh")
+		{
+			Gui, Hide
+			Sleep, 1000
+			SetKeyDelay, 0
+			Send, {LWINDOWN}{LWINUP}
+			SetKeyDelay, 100
+			Sleep, 100
+			Send, github
+			Send, {ENTER}
+			Sleep, 100
+			TrayTip, "VenControl", "GitHub..", 5, 1
+
+	}
+	if (MyEdit = "gk)
+		{
+			Gui, Hide
+			Sleep, 1000
+			SetKeyDelay, 0
+			Send, {LWINDOWN}{LWINUP}
+			SetKeyDelay, 100
+			Sleep, 100
+			Send, gitkraken
+			Send, {ENTER}
+			Sleep, 100
+			TrayTip, "VenControl", "GitHub..", 5, 1
 
 	}
 	if (MyEdit = "ya")
