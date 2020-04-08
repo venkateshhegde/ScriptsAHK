@@ -100,35 +100,56 @@ if (Length > 0)
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Git Bash..", 5, 1
+		Sleep, 2000
+		Send, {LWINDOWN}{Right}{Up}{LWINUP}
 
 	}
 	if (MyEdit = "gh")
-		{
-			Gui, Hide
-			Sleep, 1000
-			SetKeyDelay, 0
-			Send, {LWINDOWN}{LWINUP}
-			SetKeyDelay, 100
-			Sleep, 100
-			Send, github
-			Send, {ENTER}
-			Sleep, 100
-			TrayTip, "VenControl", "GitHub..", 5, 1
+	{
+		Gui, Hide
+		Sleep, 1000
+		SetKeyDelay, 0
+		Send, {LWINDOWN}{LWINUP}
+		SetKeyDelay, 100
+		Sleep, 100
+		Send, github
+		Send, {ENTER}
+		Sleep, 100
+		TrayTip, "VenControl", "GitHub..", 5, 1
+		Send, {LWINDOWN}{Up}{LWINUP}
 
 	}
 	if (MyEdit = "gk")
-		{
-			Gui, Hide
-			Sleep, 1000
-			SetKeyDelay, 0
-			Send, {LWINDOWN}{LWINUP}
-			SetKeyDelay, 100
-			Sleep, 100
-			Send, gitkraken
-			Send, {ENTER}
-			Sleep, 100
-			TrayTip, "VenControl", "GitHub..", 5, 1
+	{
+		Gui, Hide
+		Sleep, 1000
+		SetKeyDelay, 0
+		Send, {LWINDOWN}{LWINUP}
+		SetKeyDelay, 100
+		Sleep, 100
+		Send, gitkraken
+		Send, {ENTER}
+		Sleep, 100
+		TrayTip, "VenControl", "GitKraken..", 5, 1
+		Sleep, 5000
+		Send, {LWINDOWN}{Up}{Left}{Left}{Down}{LWINUP}
 
+	}
+	if (MyEdit = "ud")
+	{
+		Gui, Hide
+		Sleep, 1000
+		SetKeyDelay, 0
+		Send, {LWINDOWN}{LWINUP}
+		SetKeyDelay, 100
+		Sleep, 100
+		Send, udemy
+		Send, {ENTER}
+		Sleep, 100
+		TrayTip, "VenControl", "Udemy..", 5, 1
+		Sleep, 3000
+		Send, {LWINDOWN}{Up}{Left}{Left}{Up}{LWINUP}
+	
 	}
 	if (MyEdit = "ya")
 	{
