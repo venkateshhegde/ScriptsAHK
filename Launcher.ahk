@@ -116,7 +116,7 @@ if (Length > 0)
 			TrayTip, "VenControl", "GitHub..", 5, 1
 
 	}
-	if (MyEdit = "gk)
+	if (MyEdit = "gk")
 		{
 			Gui, Hide
 			Sleep, 1000
