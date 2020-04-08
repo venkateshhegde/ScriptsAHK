@@ -1,3 +1,4 @@
+
 ^!c::
 WinGet, id, list, , , Program Manager
 Loop, %id%
