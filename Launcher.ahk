@@ -37,6 +37,17 @@ TrayTip, "VenControl", "Webex Sessions...", 5, 1
 Return
 }
 
+^!g::
+{
+SetKeyDelay, 100
+Send {CTRL down}{ALT down}z{CTRL up}{ALT up}
+Sleep, 100
+Send {CTRL down}{Pgdn}{CTRL up}
+Sleep, 100
+TrayTip, "VenControl", "Google Search Sessions...", 5, 1
+Return
+}
+
 DoWork(MyEdit)
 {
         if (MyEdit = "cv")
@@ -103,7 +114,7 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
+		SetKeyDelay, 100
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		
@@ -342,7 +353,7 @@ else if (StrLen(MyEdit2) > 0)
 	Send {ALT down}d{ALT up}
 	Sleep, 300
 	
-	Send, %MyEdit2%
+	Send, %MyEdit2% %A_Space%
 	Sleep, 400
 	Send, {ENTER}
 	Sleep, 100
