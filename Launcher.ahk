@@ -82,13 +82,16 @@ if (Length > 0)
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		Sleep, 100
+		SetKeyDelay, 0
 		Send, classroom
+		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Classroom..", 5, 1
 		Sleep, 2000
+		SetKeyDelay, 100
 		Send, {LWINDOWN}{Up}{Up}{LWINUP}
-
+		SetKeyDelay, 100
 	}
 	if (MyEdit = "gb")
 	{
@@ -98,12 +101,16 @@ if (Length > 0)
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		Sleep, 100
+		SetKeyDelay, 0
 		Send, gitbash
+		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Git Bash..", 5, 1
 		Sleep, 2000
+		SetKeyDelay, 100
 		Send, {LWINDOWN}{Right}{Up}{LWINUP}
+		SetKeyDelay, 0
 
 	}
 	if (MyEdit = "gh")
@@ -114,11 +121,16 @@ if (Length > 0)
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		Sleep, 100
+		SetKeyDelay, 0
 		Send, github
+		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "GitHub..", 5, 1
+		Sleep, 2000
+		SetKeyDelay, 100
 		Send, {LWINDOWN}{Up}{LWINUP}
+		SetKeyDelay, 0
 
 	}
 	if (MyEdit = "gk")
@@ -127,14 +139,19 @@ if (Length > 0)
 		Sleep, 1000
 		SetKeyDelay, 0
 		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		SetKeyDelay, 0
 		Sleep, 100
+		SetKeyDelay, 0
 		Send, gitkraken
+		Sleep, 100
+		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "GitKraken..", 5, 1
 		Sleep, 5000
-		Send, {LWINDOWN}{Up}{Left}{Left}{Down}{LWINUP}
+		SetKeyDelay, 5
+		Send, {LWINDOWN}{Up}{Up}{Up}{Up}{Left}{Left}{Down}{LWINUP}
+		SetKeyDelay, 0
 
 	}
 	if (MyEdit = "ud")
@@ -145,12 +162,16 @@ if (Length > 0)
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		Sleep, 100
+		SetKeyDelay, 0
 		Send, udemy
+		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Udemy..", 5, 1
 		Sleep, 3000
+		SetKeyDelay, 100
 		Send, {LWINDOWN}{Up}{Left}{Left}{Up}{LWINUP}
+		SetKeyDelay, 0
 	
 	}
 	if (MyEdit = "ya")
@@ -161,12 +182,16 @@ if (Length > 0)
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		Sleep, 100
+		SetKeyDelay, 0
 		Send, yahoo
+		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Yahoo..", 5, 1
 		Sleep, 2000
+		SetKeyDelay, 100
 		Send, {LWINDOWN}{Up}{Up}{LWINUP}
+		SetKeyDelay, 0
 	}
 	if (MyEdit = "am")
 	{
@@ -176,12 +201,16 @@ if (Length > 0)
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		Sleep, 100
+		SetKeyDelay, 0
 		Send, amazon.com
+		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Amazon..", 5, 1
 		Sleep, 2000
+		SetKeyDelay, 5
 		Send, {LWINDOWN}{Up}{Up}{LWINUP}
+		SetKeyDelay, 0
 	}
 	if (MyEdit = "ym")
 	{
@@ -191,12 +220,16 @@ if (Length > 0)
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		Sleep, 100
+		SetKeyDelay, 0
 		Send, yahoo mail
+		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Classroom..", 5, 1
 		Sleep, 2000
+		SetKeyDelay, 5
 		Send, {LWINDOWN}{Up}{Up}{LWINUP}
+		SetKeyDelay, 0
 
 	}
 	if (MyEdit = "gm")
@@ -212,7 +245,9 @@ if (Length > 0)
 		Sleep, 100
 		TrayTip, "VenControl", "Classroom..", 5, 1
 		Sleep, 2000
+		SetKeyDelay, 5
 		Send, {LWINDOWN}{Up}{Up}{LWINUP}
+		SetKeyDelay, 0
 
 	}
 	if (MyEdit = "gn")
@@ -228,7 +263,9 @@ if (Length > 0)
 		Sleep, 100
 		TrayTip, "VenControl", "Classroom..", 5, 1
 		Sleep, 2000
+		SetKeyDelay, 5
 	  	Send, {LWINDOWN}{Up}{Up}{LWINUP}
+	  	SetKeyDelay, 0
 	}
 }
 else if (Classroom = 1)
@@ -244,7 +281,9 @@ else if (Classroom = 1)
 	Sleep, 100
 	TrayTip, "VenControl", "Classroom...", 5, 1
 	Sleep, 2000
+	SetKeyDelay, 5
 	Send, {LWINDOWN}{Up}{Up}{LWINUP}
+	SetKeyDelay, 0
 
 
 }
@@ -255,17 +294,20 @@ else if (MyCheckbox = 1)
 	TrayTip, "VenControl", "Bringing up Outlook", 5, 1
 	Send {CTRL down}{ALT down}o {CTRL up}{ALT up}
 	Sleep, 2000
+	SetKeyDelay, 5
 	Send, {LWINDOWN}{Up}{Up}{LWINUP}
+	SetKeyDelay, 0
 }
 else if (Baris = 1)
 {
 	Gui, Hide
 	Sleep, 1000
 	TrayTip, "VenControl", "Webex with Baris", 5, 1
+	SetKeyDelay, 5
 	Send {CTRL down}{ALT down}i{CTRL up}{ALT up}
 	Sleep, 3000
 
-	SetKeyDelay, 100
+	SetKeyDelay, 5
 	Send {ALT down}d{ALT up}
 		Sleep, 400
 	Send, https://cmeg.webex.com/meet/Baris.Mestanogullari
