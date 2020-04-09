@@ -285,8 +285,8 @@ DoWork(MyEdit)
 ^!z::
 {
 
-Gui, Add, Tab2,, Email|Webex|Classroom|Websites  ; Tab2 vs. Tab requires v1.0.47.05.
-Gui, Add, Checkbox, vMyCheckbox, Sample checkbox
+Gui, Add, Tab2,, Google Search|Webex|Classroom|Websites  ; Tab2 vs. Tab requires v1.0.47.05.
+Gui, Add, Edit, r1 vMyEdit2,
 Gui, Tab, 2
 Gui, Add, Radio, vBaris, Baris
 Gui, Add, Radio, vICC, ICC
@@ -326,44 +326,30 @@ if (Length > 0)
 	{
 	     this_color := CommandArray%a_index%
 	     DoWork(this_color )
-
-	  
-
 	}
-	
-	
-	
-	
 }
-else if (Classroom = 1)
+else if (StrLen(MyEdit2) > 0)
 {
 	Gui, Hide
-	SetKeyDelay, 0
-
+	SetKeyDelay, 100
+	
 	Send, {LWINDOWN}{LWINUP}
 	SetKeyDelay, 100
-	Sleep, 100
-	Send, classroom
+	SetKeyDelay, 5
+	Send {CTRL down}{ALT down}b{CTRL up}{ALT up}
+	Sleep, 3000
+	SetKeyDelay, 5
+	Send {ALT down}d{ALT up}
+	Sleep, 300
+	
+	Send, %MyEdit2%
+	Sleep, 400
 	Send, {ENTER}
 	Sleep, 100
-	TrayTip, "VenControl", "Classroom...", 5, 1
+	TrayTip, "VenControl", "Google Search ..." , 5, 1
 	Sleep, 2000
-	SetKeyDelay, 5
-	Send, {LWINDOWN}{Up}{Up}{LWINUP}
-	SetKeyDelay, 0
 
 
-}
-else if (MyCheckbox = 1)
-{
-	Gui, Hide
-	Sleep, 1000
-	TrayTip, "VenControl", "Bringing up Outlook", 5, 1
-	Send {CTRL down}{ALT down}o {CTRL up}{ALT up}
-	Sleep, 2000
-	SetKeyDelay, 5
-	Send, {LWINDOWN}{Up}{Up}{LWINUP}
-	SetKeyDelay, 0
 }
 else if (Baris = 1)
 {
