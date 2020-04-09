@@ -692,9 +692,8 @@ Return
 SetKeyDelay, 0
 
 Send, {LWINDOWN}{LWINUP}
-SetKeyDelay, 1
+SetKeyDelay, 100
 Send, Outlook Web
-SetKeyDelay, 0
 Send, {ENTER}
 Sleep, 3000
 Send, {LWINDOWN}{Up}{Up}{LWINUP}
