@@ -35,46 +35,9 @@ TrayTip, "VenControl", "Webex Sessions...", 5, 1
 Return
 }
 
-^!z::
+DoWork(MyEdit)
 {
-
-Gui, Add, Tab2,, Email|Webex|Classroom|Websites  ; Tab2 vs. Tab requires v1.0.47.05.
-Gui, Add, Checkbox, vMyCheckbox, Sample checkbox
-Gui, Tab, 2
-Gui, Add, Radio, vBaris, Baris
-Gui, Add, Radio, vICC, ICC
-Gui, Add, Radio, vT1, T1
-Gui, Add, Radio, vT3, T3
-Gui, Add, Radio, vFritz, Fritz
-Gui, Add, Radio, vYev, Yev
-Gui, Add, Radio, vAlla, Alla
-Gui, Add, Radio, vStan, Stan
-Gui, Add, Radio, vFriday, Friday
-Gui, Tab, 3
-Gui, Add, Checkbox, vClassroom checked, Classroom
-Gui, Tab, 4
-Gui, Add, Edit, r1 vMyEdit,
-
-Gui, Tab  ; i.e. subsequently-added controls will not belong to the tab control.
-Gui, Add, Button, default xm, OK  ; xm puts it at the bottom left corner.
-Gui, Show
-Sleep, 10
-Send {CTRL down}{Pgdn}{CTRL up}
-Sleep, 10
-Send {CTRL down}{Pgdn}{CTRL up}
-Sleep, 10
-Send {CTRL down}{Pgdn}{CTRL up}
-return
-
-ButtonOK:
-
-Gui, Submit  ; Save each control's contents to its associated variable.
-;MsgBox You entered:`n%MyCheckbox%`n%MyRadio%`n%MyEdit%
-Length := StrLen(MyEdit)
-if (Length > 0)
-{
-	StringLower, MyEdit, MyEdit
-	if (MyEdit = "cl")
+        if (MyEdit = "cl")
 	{
 		Gui, Hide
 		Sleep, 1000
@@ -85,6 +48,7 @@ if (Length > 0)
 		SetKeyDelay, 0
 		Send, classroom
 		SetKeyDelay, 100
+		Sleep, 100
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Classroom..", 5, 1
@@ -100,9 +64,10 @@ if (Length > 0)
 		SetKeyDelay, 0
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
-		Sleep, 100
+		
 		SetKeyDelay, 0
 		Send, gitbash
+		Sleep, 100
 		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
@@ -123,6 +88,7 @@ if (Length > 0)
 		Sleep, 100
 		SetKeyDelay, 0
 		Send, github
+		Sleep, 100
 		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
@@ -133,7 +99,7 @@ if (Length > 0)
 		SetKeyDelay, 0
 
 	}
-	if (MyEdit = "gk")
+       if (MyEdit = "gk")
 	{
 		Gui, Hide
 		Sleep, 1000
@@ -164,6 +130,7 @@ if (Length > 0)
 		Sleep, 100
 		SetKeyDelay, 0
 		Send, udemy
+		Sleep, 100
 		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
@@ -271,6 +238,60 @@ if (Length > 0)
 	  	Send, {LWINDOWN}{Up}{Up}{LWINUP}
 	  	SetKeyDelay, 0
 	}
+}
+
+^!z::
+{
+
+Gui, Add, Tab2,, Email|Webex|Classroom|Websites  ; Tab2 vs. Tab requires v1.0.47.05.
+Gui, Add, Checkbox, vMyCheckbox, Sample checkbox
+Gui, Tab, 2
+Gui, Add, Radio, vBaris, Baris
+Gui, Add, Radio, vICC, ICC
+Gui, Add, Radio, vT1, T1
+Gui, Add, Radio, vT3, T3
+Gui, Add, Radio, vFritz, Fritz
+Gui, Add, Radio, vYev, Yev
+Gui, Add, Radio, vAlla, Alla
+Gui, Add, Radio, vStan, Stan
+Gui, Add, Radio, vFriday, Friday
+Gui, Tab, 3
+Gui, Add, Checkbox, vClassroom checked, Classroom
+Gui, Tab, 4
+Gui, Add, Edit, r1 vMyEdit,
+
+Gui, Tab  ; i.e. subsequently-added controls will not belong to the tab control.
+Gui, Add, Button, default xm, OK  ; xm puts it at the bottom left corner.
+Gui, Show
+Sleep, 10
+Send {CTRL down}{Pgdn}{CTRL up}
+Sleep, 10
+Send {CTRL down}{Pgdn}{CTRL up}
+Sleep, 10
+Send {CTRL down}{Pgdn}{CTRL up}
+return
+
+ButtonOK:
+
+Gui, Submit  ; Save each control's contents to its associated variable.
+;MsgBox You entered:`n%MyCheckbox%`n%MyRadio%`n%MyEdit%
+Length := StrLen(MyEdit)
+if (Length > 0)
+{
+	StringLower, MyEdit, MyEdit
+	StringSplit, CommandArray, MyEdit, %A_Space%, .
+	Loop, %CommandArray0%
+	{
+	     this_color := CommandArray%a_index%
+	     DoWork(this_color )
+
+	  
+
+	}
+	
+	
+	
+	
 }
 else if (Classroom = 1)
 {
