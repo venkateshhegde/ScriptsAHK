@@ -27,16 +27,58 @@ Return
 
 ^!w::
 {
-Send {CTRL down}{ALT down}g {CTRL up}{ALT up}
-Sleep, 1000
+SetKeyDelay, 100
+Send {CTRL down}{ALT down}z{CTRL up}{ALT up}
+Sleep, 100
 Send {CTRL down}{Pgdn}{CTRL up}
-Sleep, 300
+Sleep, 100
+Send {CTRL down}{Pgdn}{CTRL up}
 TrayTip, "VenControl", "Webex Sessions...", 5, 1
 Return
 }
 
 DoWork(MyEdit)
 {
+        if (MyEdit = "cv")
+	{
+		Gui, Hide
+		Sleep, 1000
+		SetKeyDelay, 0
+		Send, {LWINDOWN}{LWINUP}
+		SetKeyDelay, 100
+		Sleep, 100
+		SetKeyDelay, 0
+		Send, cme vdi
+		SetKeyDelay, 100
+		Sleep, 100
+		Send, {ENTER}
+		Sleep, 100
+		TrayTip, "VenControl", "Classroom..", 5, 1
+		Sleep, 2000
+		SetKeyDelay, 100
+		Send, {LWINDOWN}{Up}{Up}{LWINUP}
+		SetKeyDelay, 100
+	}
+	if (MyEdit = "nv")
+	{
+		Gui, Hide
+		Sleep, 1000
+		SetKeyDelay, 0
+		Send, {LWINDOWN}{LWINUP}
+		SetKeyDelay, 100
+		Sleep, 100
+		SetKeyDelay, 0
+		Send, nex citrix
+		SetKeyDelay, 100
+		Sleep, 100
+		Send, {ENTER}
+		Sleep, 100
+		TrayTip, "VenControl", "Classroom..", 5, 1
+		Sleep, 2000
+		SetKeyDelay, 100
+		Send, {LWINDOWN}{Up}{Up}{LWINUP}
+		SetKeyDelay, 100
+	}
         if (MyEdit = "cl")
 	{
 		Gui, Hide
