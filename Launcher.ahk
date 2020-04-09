@@ -86,6 +86,8 @@ if (Length > 0)
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Classroom..", 5, 1
+		Sleep, 2000
+		Send, {LWINDOWN}{Up}{Up}{LWINUP}
 
 	}
 	if (MyEdit = "gb")
@@ -162,7 +164,9 @@ if (Length > 0)
 		Send, yahoo
 		Send, {ENTER}
 		Sleep, 100
-		TrayTip, "VenControl", "Classroom..", 5, 1
+		TrayTip, "VenControl", "Yahoo..", 5, 1
+		Sleep, 2000
+		Send, {LWINDOWN}{Up}{Up}{LWINUP}
 	}
 	if (MyEdit = "am")
 	{
@@ -175,7 +179,9 @@ if (Length > 0)
 		Send, amazon.com
 		Send, {ENTER}
 		Sleep, 100
-		TrayTip, "VenControl", "Classroom..", 5, 1
+		TrayTip, "VenControl", "Amazon..", 5, 1
+		Sleep, 2000
+		Send, {LWINDOWN}{Up}{Up}{LWINUP}
 	}
 	if (MyEdit = "ym")
 	{
@@ -189,6 +195,8 @@ if (Length > 0)
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Classroom..", 5, 1
+		Sleep, 2000
+		Send, {LWINDOWN}{Up}{Up}{LWINUP}
 
 	}
 	if (MyEdit = "gm")
@@ -203,21 +211,24 @@ if (Length > 0)
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Classroom..", 5, 1
+		Sleep, 2000
+		Send, {LWINDOWN}{Up}{Up}{LWINUP}
 
 	}
 	if (MyEdit = "gn")
-		{
-			Gui, Hide
-			Sleep, 1000
-			SetKeyDelay, 0
-			Send, {LWINDOWN}{LWINUP}
-			SetKeyDelay, 100
-			Sleep, 100
-			Send, google news
-			Send, {ENTER}
-			Sleep, 100
-			TrayTip, "VenControl", "Classroom..", 5, 1
-
+	{
+		Gui, Hide
+		Sleep, 1000
+		SetKeyDelay, 0
+		Send, {LWINDOWN}{LWINUP}
+		SetKeyDelay, 100
+		Sleep, 100
+		Send, google news
+		Send, {ENTER}
+		Sleep, 100
+		TrayTip, "VenControl", "Classroom..", 5, 1
+		Sleep, 2000
+	  	Send, {LWINDOWN}{Up}{Up}{LWINUP}
 	}
 }
 else if (Classroom = 1)
@@ -232,6 +243,8 @@ else if (Classroom = 1)
 	Send, {ENTER}
 	Sleep, 100
 	TrayTip, "VenControl", "Classroom...", 5, 1
+	Sleep, 2000
+	Send, {LWINDOWN}{Up}{Up}{LWINUP}
 
 
 }
@@ -241,6 +254,8 @@ else if (MyCheckbox = 1)
 	Sleep, 1000
 	TrayTip, "VenControl", "Bringing up Outlook", 5, 1
 	Send {CTRL down}{ALT down}o {CTRL up}{ALT up}
+	Sleep, 2000
+	Send, {LWINDOWN}{Up}{Up}{LWINUP}
 }
 else if (Baris = 1)
 {
@@ -571,7 +586,9 @@ Send, {LWINDOWN}{LWINUP}
 SetKeyDelay, 100
 Send, Outlook Web
 Send, {ENTER}
-Sleep, 10000
+Sleep, 3000
+Send, {LWINDOWN}{Up}{Up}{LWINUP}
+Sleep, 6000
 Send, {TAB}
 Send, {TAB}
 Send, {ENTER}
