@@ -680,6 +680,7 @@ SetKeyDelay, 0
 Send, {LWINDOWN}{LWINUP}
 SetKeyDelay, 1
 Send, Outlook Web
+Sleep, 300
 SetKeyDelay, 0
 Send, {ENTER}
 Sleep, 3000
@@ -701,6 +702,8 @@ Send, {LWINDOWN}{LWINUP}
 SetKeyDelay, 100
 Sleep, 100
 Send, atom
+Sleep, 100
+
 Send, {ENTER}
 Sleep, 100
 TrayTip, "VenControl", "Atom editor..", 5, 1
@@ -716,6 +719,8 @@ Send, {LWINDOWN}{LWINUP}
 SetKeyDelay, 100
 Sleep, 100
 Send, textpad
+Sleep, 100
+
 Send, {ENTER}
 Sleep, 100
 TrayTip, "VenControl", "Textpad...", 5, 1
@@ -731,6 +736,8 @@ Send, {LWINDOWN}{LWINUP}
 SetKeyDelay, 100
 Sleep, 100
 Send, Notepad{+}{+}
+Sleep, 100
+
 Send, {ENTER}
 Sleep, 100
 TrayTip, "VenControl", "Notepad++...", 5, 1
@@ -746,6 +753,8 @@ Send, {LWINDOWN}{LWINUP}
 SetKeyDelay, 100
 Sleep, 100
 Send, internet explorer
+Sleep, 100
+
 Send, {ENTER}
 Sleep, 100
 TrayTip, "VenControl", "Internet Explorer...", 5, 1
@@ -762,6 +771,8 @@ Send, {LWINDOWN}{LWINUP}
 SetKeyDelay, 100
 Sleep, 100
 Send, chrome
+Sleep, 100
+
 Send, {ENTER}
 Sleep, 100
 TrayTip, "VenControl", "Chrome...", 5, 1
