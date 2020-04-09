@@ -203,6 +203,7 @@ if (Length > 0)
 		Sleep, 100
 		SetKeyDelay, 0
 		Send, amazon.com
+		Sleep, 100
 		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
@@ -222,6 +223,7 @@ if (Length > 0)
 		Sleep, 100
 		SetKeyDelay, 0
 		Send, yahoo mail
+		Sleep, 100
 		SetKeyDelay, 100
 		Send, {ENTER}
 		Sleep, 100
@@ -240,7 +242,9 @@ if (Length > 0)
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		Sleep, 100
+		SetKeyDelay, 0
 		Send, gmail\
+		Sleep, 100
 		Send, {ENTER}
 		Sleep, 100
 		TrayTip, "VenControl", "Classroom..", 5, 1
