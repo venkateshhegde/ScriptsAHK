@@ -594,25 +594,25 @@ else if (Friday= 1)
 		Sleep, 400
 	Send, https://cmeg.webex.com/cmeg/j.php?MTID=m2c8e8b9969dfe30fe7dd242cbf9a22b2  %A_Space%
 	Sleep, 100
-	Send {ENTER}
-	Sleep, 4000
-
-	Send, {TAB}
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	Send, Ven
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	Send Ven@Ven.com
-	Sleep, 100
-	Send {ENTER}
-	Sleep, 100
+		Send {ENTER}
+		Sleep, 4000
+	        SetKeyDelay, 500
+		Send, {TAB}
+		Sleep, 100
+		Send, {TAB}
+		Sleep, 100
+		Send, {TAB}
+		Sleep, 100
+		SetKeyDelay, 10
+		Send, Ven
+		Sleep, 100
+		Send, {TAB}
+		Sleep, 100
+		Send Ven@Ven.com
+		Sleep, 100
+		Send {ENTER}
+		Sleep, 100
+	SetKeyDelay, 100
 }
 else if (T1 = 1)
 {
@@ -627,26 +627,25 @@ else if (T1 = 1)
 		Sleep, 400
 	Send, https://cmeg.webex.com/cmeg/j.php?MTID=m11b3f73dab41277a8a0b34e6a2eda593  %A_Space%
 	Sleep, 100
-	Send {ENTER}
-	Sleep, 4000
-
-	Send, {TAB}
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	Send, Ven
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	SetKeyDelay, 10
-	Send Ven@Ven.com
-	Sleep, 100
-	Send {ENTER}
-	Sleep, 100
+		Send {ENTER}
+		Sleep, 4000
+	        SetKeyDelay, 500
+		Send, {TAB}
+		Sleep, 100
+		Send, {TAB}
+		Sleep, 100
+		Send, {TAB}
+		Sleep, 100
+		SetKeyDelay, 10
+		Send, Ven
+		Sleep, 100
+		Send, {TAB}
+		Sleep, 100
+		Send Ven@Ven.com
+		Sleep, 100
+		Send {ENTER}
+		Sleep, 100
+	SetKeyDelay, 100
 }
 else if (T3 = 1)
 {
@@ -662,26 +661,25 @@ else if (T3 = 1)
 	Sleep, 400
 	Send, https://cmeg.webex.com/cmeg/j.php?MTID=m4cca20da188f82a206882c840ab26b2f  %A_Space%
 	Sleep, 100
-	Send {ENTER}
-	Sleep, 4000
-
-	Send, {TAB}
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	SetKeyDelay, 10
-	Send, Ven
-	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
-	Send Ven@Ven.com
-	Sleep, 100
-	Send {ENTER}
-	Sleep, 100
+		Send {ENTER}
+		Sleep, 4000
+	        SetKeyDelay, 500
+		Send, {TAB}
+		Sleep, 100
+		Send, {TAB}
+		Sleep, 100
+		Send, {TAB}
+		Sleep, 100
+		SetKeyDelay, 10
+		Send, Ven
+		Sleep, 100
+		Send, {TAB}
+		Sleep, 100
+		Send Ven@Ven.com
+		Sleep, 100
+		Send {ENTER}
+		Sleep, 100
+	SetKeyDelay, 100
 }
 Gui, Destroy
 Return
