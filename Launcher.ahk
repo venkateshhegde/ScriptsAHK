@@ -221,7 +221,7 @@ DoWork(MyEdit)
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		Sleep, 100
-		SetKeyDelay, 1
+		SetKeyDelay, 10
 		Send, amazon.com
 		Sleep, 100
 		SetKeyDelay, 100
