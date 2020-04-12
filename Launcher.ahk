@@ -70,7 +70,27 @@ DoWork(MyEdit)
 		Send, {LWINDOWN}{Up}{Up}{LWINUP}
 		SetKeyDelay, 100
 	}
-	if (MyEdit = "nv")
+	 if (MyEdit = "cv")
+		{
+			Gui, Hide
+			Sleep, 1000
+			SetKeyDelay, 0
+			Send, {LWINDOWN}{LWINUP}
+			SetKeyDelay, 100
+			Sleep, 100
+			SetKeyDelay, 0
+			Send, cme vdi
+			SetKeyDelay, 100
+			Sleep, 100
+			Send, {ENTER}
+			Sleep, 100
+			TrayTip, "VenControl", "Classroom..", 5, 1
+			Sleep, 2000
+			SetKeyDelay, 100
+			Send, {LWINDOWN}{Up}{Up}{LWINUP}
+			SetKeyDelay, 100
+	}
+	if (MyEdit = "ev")
 	{
 		Gui, Hide
 		Sleep, 1000
@@ -79,7 +99,7 @@ DoWork(MyEdit)
 		SetKeyDelay, 100
 		Sleep, 100
 		SetKeyDelay, 0
-		Send, nex citrix
+		Send, evernote
 		SetKeyDelay, 100
 		Sleep, 100
 		Send, {ENTER}
