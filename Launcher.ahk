@@ -237,11 +237,11 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
+		SetKeyDelay, 1000
 		Send, {LWINDOWN}{LWINUP}
 		SetKeyDelay, 100
 		Sleep, 100
-		SetKeyDelay, 0
+		SetKeyDelay, 10
 		Send, amazon.com
 		Sleep, 100
 		SetKeyDelay, 100
