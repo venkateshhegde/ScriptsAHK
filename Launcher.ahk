@@ -48,17 +48,22 @@ TrayTip, "VenControl", "Google Search Sessions...", 5, 1
 Return
 }
 
+DoWinKey()
+{
+	SetKeyDelay, 100
+	Send, {LWINDOWN}{LWINUP}
+	SetKeyDelay, 100
+}
+
 DoWork(MyEdit)
 {
         if (MyEdit = "cv")
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		Sleep, 100
-		SetKeyDelay, 0
+		SetKeyDelay, 1
 		Send, cme vdi
 		SetKeyDelay, 100
 		Sleep, 100
@@ -71,35 +76,13 @@ DoWork(MyEdit)
 		SetKeyDelay, 100
 	}
 	
-	        if (MyEdit = "cv")
-		{
-			Gui, Hide
-			Sleep, 1000
-			SetKeyDelay, 0
-			Send, {LWINDOWN}{LWINUP}
-			SetKeyDelay, 100
-			Sleep, 100
-			SetKeyDelay, 0
-			Send, cme vdi
-			SetKeyDelay, 100
-			Sleep, 100
-			Send, {ENTER}
-			Sleep, 100
-			TrayTip, "VenControl", "Classroom..", 5, 1
-			Sleep, 2000
-			SetKeyDelay, 100
-			Send, {LWINDOWN}{Up}{Up}{LWINUP}
-			SetKeyDelay, 100
-	}
 	 if (MyEdit = "gd")
 		{
 			Gui, Hide
 			Sleep, 1000
-			SetKeyDelay, 0
-			Send, {LWINDOWN}{LWINUP}
-			SetKeyDelay, 100
+			DoWinKey()
 			Sleep, 100
-			SetKeyDelay, 0
+			SetKeyDelay, 1
 			Send, google drive
 			SetKeyDelay, 100
 			Sleep, 100
@@ -115,11 +98,9 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		Sleep, 100
-		SetKeyDelay, 0
+		SetKeyDelay, 1
 		Send, evernote
 		SetKeyDelay, 100
 		Sleep, 100
@@ -135,9 +116,7 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		Sleep, 100
 		SetKeyDelay, 0
 		Send, classroom
@@ -155,11 +134,9 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 100
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		
-		SetKeyDelay, 0
+		SetKeyDelay, 1
 		Send, gitbash
 		Sleep, 100
 		SetKeyDelay, 100
@@ -176,11 +153,9 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		Sleep, 100
-		SetKeyDelay, 0
+		SetKeyDelay, 1
 		Send, github
 		Sleep, 100
 		SetKeyDelay, 100
@@ -197,11 +172,9 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 0
+		DoWinKey()
 		Sleep, 100
-		SetKeyDelay, 0
+		SetKeyDelay, 1
 		Send, gitkraken
 		Sleep, 100
 		SetKeyDelay, 100
@@ -218,11 +191,9 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		Sleep, 100
-		SetKeyDelay, 0
+		SetKeyDelay, 1
 		Send, udemy
 		Sleep, 100
 		SetKeyDelay, 100
@@ -239,11 +210,9 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		Sleep, 100
-		SetKeyDelay, 0
+		SetKeyDelay, 1
 		Send, yahoo
 		SetKeyDelay, 100
 		Send, {ENTER}
@@ -258,11 +227,9 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 1000
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		Sleep, 100
-		SetKeyDelay, 10
+		SetKeyDelay, 1
 		Send, amazon.com
 		Sleep, 100
 		SetKeyDelay, 100
@@ -278,11 +245,9 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		Sleep, 100
-		SetKeyDelay, 0
+		SetKeyDelay, 1
 		Send, yahoo mail
 		Sleep, 100
 		SetKeyDelay, 100
@@ -299,11 +264,9 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		Sleep, 100
-		SetKeyDelay, 0
+		SetKeyDelay, 1
 		Send, gmail\
 		Sleep, 100
 		Send, {ENTER}
@@ -319,10 +282,9 @@ DoWork(MyEdit)
 	{
 		Gui, Hide
 		Sleep, 1000
-		SetKeyDelay, 0
-		Send, {LWINDOWN}{LWINUP}
-		SetKeyDelay, 100
+		DoWinKey()
 		Sleep, 100
+		SetKeyDelay, 1
 		Send, google news
 		Send, {ENTER}
 		Sleep, 100
@@ -383,10 +345,7 @@ if (Length > 0)
 else if (StrLen(MyEdit2) > 0)
 {
 	Gui, Hide
-	SetKeyDelay, 100
 	
-	Send, {LWINDOWN}{LWINUP}
-	SetKeyDelay, 100
 	SetKeyDelay, 5
 	Send {CTRL down}{ALT down}b{CTRL up}{ALT up}
 	Sleep, 3000
@@ -408,18 +367,19 @@ else if (Baris = 1)
 	Gui, Hide
 	Sleep, 1000
 	TrayTip, "VenControl", "Webex with Baris", 5, 1
-	SetKeyDelay, 10
+	SetKeyDelay, 100
 	Send {CTRL down}{ALT down}i{CTRL up}{ALT up}
 	Sleep, 3000
 
-	SetKeyDelay, 10
+	SetKeyDelay, 100
 	Send {ALT down}d{ALT up}
 	Sleep, 400
+	SetKeyDelay, 1
 	Send, https://cmeg.webex.com/meet/Baris.Mestanogullari
 	Sleep, 100
 	Send {ENTER}
 	Sleep, 4000
-
+        SetKeyDelay, 100
 	Send, {TAB}
 	Sleep, 100
 	Send, {TAB}
@@ -452,11 +412,12 @@ else if (ICC = 1)
 	SetKeyDelay, 10
 	Send {ALT down}d{ALT up}
 	Sleep, 400
+	SetKeyDelay, 1
 	Send, https://cmeg.webex.com/cmeg/j.php?MTID=mb23f52b20feb03e68d074e79b67b09d0 %A_Space%
 	Sleep, 100
 	Send {ENTER}
 	Sleep, 4000
-        SetKeyDelay, 500
+        SetKeyDelay, 100
 	Send, {TAB}
 	Sleep, 100
 	Send, {TAB}
@@ -484,12 +445,13 @@ else if (Yev = 1)
 
 	SetKeyDelay, 100
 	Send {ALT down}d{ALT up}
-		Sleep, 400
+	Sleep, 400
+	SetKeyDelay, 1
 	Send, https://cmeg.webex.com/meet/Yevgeniy.Brailovskiy
 	Sleep, 100
 	Send {ENTER}
 	Sleep, 4000
-
+        SetKeyDelay, 100
 	Send, {TAB}
 	Sleep, 100
 	Send, {TAB}
@@ -502,10 +464,12 @@ else if (Yev = 1)
 	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
+	SetKeyDelay, 1
 	Send, Ven
 	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
+	
 	Send Ven@Ven.com
 	Sleep, 100
 	Send {ENTER}
@@ -521,7 +485,8 @@ else if (Alla = 1)
 
 	SetKeyDelay, 100
 	Send {ALT down}d{ALT up}
-		Sleep, 400
+	Sleep, 400
+	SetKeyDelay, 1
 	Send, https://cmeg.webex.com/meet/Alla.Layvant
 	Sleep, 100
 	Send {ENTER}
@@ -539,6 +504,7 @@ else if (Alla = 1)
 	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
+	SetKeyDelay, 1
 	Send, Ven
 	Sleep, 100
 	Send, {TAB}
@@ -558,7 +524,8 @@ else if (Stan = 1)
 
 	SetKeyDelay, 100
 	Send {ALT down}d{ALT up}
-		Sleep, 400
+	Sleep, 400
+	SetKeyDelay, 1
 	Send, https://cmeg.webex.com/meet/Stanislav.Liberman
 	Sleep, 100
 	Send {ENTER}
@@ -576,6 +543,7 @@ else if (Stan = 1)
 	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
+	SetKeyDelay, 1
 	Send, Ven
 	Sleep, 100
 	Send, {TAB}
@@ -595,7 +563,8 @@ else if (Fritz = 1)
 
 	SetKeyDelay, 100
 	Send {ALT down}d{ALT up}
-		Sleep, 400
+	Sleep, 400
+	SetKeyDelay, 1
 	Send, https://cmeg.webex.com/meet/Fritz.Caskey
 	Sleep, 100
 	Send {ENTER}
@@ -632,27 +601,28 @@ else if (Friday= 1)
 
 	SetKeyDelay, 100
 	Send {ALT down}d{ALT up}
-		Sleep, 400
+	Sleep, 400
+	SetKeyDelay, 1
 	Send, https://cmeg.webex.com/cmeg/j.php?MTID=m2c8e8b9969dfe30fe7dd242cbf9a22b2  %A_Space%
 	Sleep, 100
-		Send {ENTER}
-		Sleep, 4000
-	        SetKeyDelay, 500
-		Send, {TAB}
-		Sleep, 100
-		Send, {TAB}
-		Sleep, 100
-		Send, {TAB}
-		Sleep, 100
-		SetKeyDelay, 10
-		Send, Ven
-		Sleep, 100
-		Send, {TAB}
-		Sleep, 100
-		Send Ven@Ven.com
-		Sleep, 100
-		Send {ENTER}
-		Sleep, 100
+	Send {ENTER}
+	Sleep, 4000
+	SetKeyDelay, 500
+	Send, {TAB}
+	Sleep, 100
+	Send, {TAB}
+	Sleep, 100
+	Send, {TAB}
+	Sleep, 100
+	SetKeyDelay, 10
+	Send, Ven
+	Sleep, 100
+	Send, {TAB}
+	Sleep, 100
+	Send Ven@Ven.com
+	Sleep, 100
+	Send {ENTER}
+	Sleep, 100
 	SetKeyDelay, 100
 }
 else if (T1 = 1)
@@ -665,27 +635,28 @@ else if (T1 = 1)
 
 	SetKeyDelay, 100
 	Send {ALT down}d{ALT up}
-		Sleep, 400
+	Sleep, 400
+	SetKeyDelay, 1
 	Send, https://cmeg.webex.com/cmeg/j.php?MTID=m11b3f73dab41277a8a0b34e6a2eda593  %A_Space%
 	Sleep, 100
-		Send {ENTER}
-		Sleep, 4000
-	        SetKeyDelay, 500
-		Send, {TAB}
-		Sleep, 100
-		Send, {TAB}
-		Sleep, 100
-		Send, {TAB}
-		Sleep, 100
-		SetKeyDelay, 10
-		Send, Ven
-		Sleep, 100
-		Send, {TAB}
-		Sleep, 100
-		Send Ven@Ven.com
-		Sleep, 100
-		Send {ENTER}
-		Sleep, 100
+	Send {ENTER}
+	Sleep, 4000
+	SetKeyDelay, 500
+	Send, {TAB}
+	Sleep, 100
+	Send, {TAB}
+	Sleep, 100
+	Send, {TAB}
+	Sleep, 100
+	SetKeyDelay, 10
+	Send, Ven
+	Sleep, 100
+	Send, {TAB}
+	Sleep, 100
+	Send Ven@Ven.com
+	Sleep, 100
+	Send {ENTER}
+	Sleep, 100
 	SetKeyDelay, 100
 }
 else if (T3 = 1)
@@ -700,26 +671,27 @@ else if (T3 = 1)
 	SetKeyDelay, 100
 	Send {ALT down}d{ALT up}
 	Sleep, 400
+	SetKeyDelay, 1
 	Send, https://cmeg.webex.com/cmeg/j.php?MTID=m4cca20da188f82a206882c840ab26b2f  %A_Space%
 	Sleep, 100
-		Send {ENTER}
-		Sleep, 4000
-	        SetKeyDelay, 500
-		Send, {TAB}
-		Sleep, 100
-		Send, {TAB}
-		Sleep, 100
-		Send, {TAB}
-		Sleep, 100
-		SetKeyDelay, 10
-		Send, Ven
-		Sleep, 100
-		Send, {TAB}
-		Sleep, 100
-		Send Ven@Ven.com
-		Sleep, 100
-		Send {ENTER}
-		Sleep, 100
+	Send {ENTER}
+	Sleep, 4000
+	SetKeyDelay, 500
+	Send, {TAB}
+	Sleep, 100
+	Send, {TAB}
+	Sleep, 100
+	Send, {TAB}
+	Sleep, 100
+	SetKeyDelay, 10
+	Send, Ven
+	Sleep, 100
+	Send, {TAB}
+	Sleep, 100
+	Send Ven@Ven.com
+	Sleep, 100
+	Send {ENTER}
+	Sleep, 100
 	SetKeyDelay, 100
 }
 Gui, Destroy
@@ -736,13 +708,12 @@ Return
 
 ^!o::
 {
-SetKeyDelay, 0
 
-Send, {LWINDOWN}{LWINUP}
+DoWinKey()
 SetKeyDelay, 1
 Send, Outlook Web
 Sleep, 300
-SetKeyDelay, 0
+SetKeyDelay, 1
 Send, {ENTER}
 Sleep, 3000
 Send, {LWINDOWN}{Up}{Up}{LWINUP}
@@ -794,7 +765,7 @@ Return
 SetKeyDelay, 0
 
 Send, {LWINDOWN}{LWINUP}
-SetKeyDelay, 100
+SetKeyDelay, 1
 Sleep, 100
 Send, Notepad{+}{+}
 Sleep, 100
@@ -829,10 +800,11 @@ Sleep, 100
 SetKeyDelay, 100
 
 Send, {LWINDOWN}{LWINUP}
-SetKeyDelay, 100
+SetKeyDelay, 1
 Sleep, 100
 Send, chrome
 Sleep, 100
+SetKeyDelay, 100
 
 Send, {ENTER}
 Sleep, 100
