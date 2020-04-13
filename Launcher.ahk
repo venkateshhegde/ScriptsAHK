@@ -1,4 +1,5 @@
-
+		
+		
 ^!c::
 WinGet, id, list, , , Program Manager
 Loop, %id%
@@ -53,6 +54,7 @@ DoWinKey()
 	SetKeyDelay, 100
 	Send, {LWINDOWN}{LWINUP}
 	SetKeyDelay, 100
+	Return
 }
 
 DoWork(MyEdit)
@@ -205,6 +207,24 @@ DoWork(MyEdit)
 		Send, {LWINDOWN}{Up}{Left}{Left}{Up}{LWINUP}
 		SetKeyDelay, 0
 	
+	}
+	if (MyEdit = "ou")
+	{
+		Gui, Hide
+		Sleep, 1000
+		DoWinKey()
+		Sleep, 100
+		SetKeyDelay, 1
+		Send, outlook web 
+		Sleep, 100
+		SetKeyDelay, 100
+		Send, {ENTER}
+		Sleep, 100
+		TrayTip, "VenControl", "Udemy..", 5, 1
+		Sleep, 3000
+		SetKeyDelay, 100
+		Send, {LWINDOWN}{Up}{Left}{Left}{Up}{LWINUP}
+		SetKeyDelay, 0
 	}
 	if (MyEdit = "ya")
 	{
@@ -730,15 +750,16 @@ Return
 {
 SetKeyDelay, 0
 
-Send, {LWINDOWN}{LWINUP}
+DoWinKey()
 SetKeyDelay, 100
 Sleep, 100
 Send, atom
+
 Sleep, 100
 
 Send, {ENTER}
 Sleep, 100
-TrayTip, "VenControl", "Atom editor..", 5, 1
+TrayTip, "VenControl", "Textpad...", 5, 1
 
 Return
 }
@@ -747,7 +768,7 @@ Return
 {
 SetKeyDelay, 0
 
-Send, {LWINDOWN}{LWINUP}
+DoWinKey()
 SetKeyDelay, 100
 Sleep, 100
 Send, textpad
@@ -764,7 +785,7 @@ Return
 {
 SetKeyDelay, 0
 
-Send, {LWINDOWN}{LWINUP}
+DoWinKey()
 SetKeyDelay, 1
 Sleep, 100
 Send, Notepad{+}{+}
@@ -781,7 +802,7 @@ Return
 {
 SetKeyDelay, 0
 
-Send, {LWINDOWN}{LWINUP}
+DoWinKey()
 SetKeyDelay, 10
 Sleep, 100
 Send, internet explorer
@@ -799,7 +820,7 @@ Return
 Sleep, 100
 SetKeyDelay, 100
 
-Send, {LWINDOWN}{LWINUP}
+DoWinKey()
 SetKeyDelay, 1
 Sleep, 100
 Send, chrome
