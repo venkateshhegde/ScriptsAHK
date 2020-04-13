@@ -8,20 +8,7 @@ Loop, %id%
 	WinGetTitle, this_title, ahk_id %this_id%
 	winclose,%this_title%
 }
-WinGet, id, list, , , Program Manager
-Loop, %id%
-{
-	StringTrimRight, this_id, id%a_index%, 0
-	WinGetTitle, this_title, ahk_id %this_id%
-	winclose,%this_title%
-}
-WinGet, id, list, , , Program Manager
-Loop, %id%
-{
-	StringTrimRight, this_id, id%a_index%, 0
-	WinGetTitle, this_title, ahk_id %this_id%
-	winclose,%this_title%
-}
+
 
 TrayTip, "VenControl", "Closed all windows", 5, 1
 Return
