@@ -424,7 +424,11 @@ else if (ICC = 1)
 	Sleep, 100
 	Send {ENTER}
 	Sleep, 4000
+<<<<<<< Updated upstream
         SetKeyDelay, 100
+=======
+
+>>>>>>> Stashed changes
 	Send, {TAB}
 	
 	Sleep, 100
@@ -619,8 +623,6 @@ else if (Friday= 1)
 	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
-	Send, {TAB}
-	Sleep, 100
 	Send, Ven
 	Sleep, 100
 	Send, {TAB}
@@ -648,8 +650,6 @@ else if (T1 = 1)
 	Send {ENTER}
 	Sleep, 4000
 	SetKeyDelay, 500
-	Send, {TAB}
-	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
 	Send, {TAB}
@@ -682,8 +682,6 @@ else if (T3 = 1)
 	Send {ENTER}
 	Sleep, 4000
 	SetKeyDelay, 500
-	Send, {TAB}
-	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
 	Send, {TAB}
