@@ -8,10 +8,11 @@ Loop, %id%
 	WinGetTitle, this_title, ahk_id %this_id%
 	winclose,%this_title%
 }
-
-
 TrayTip, "VenControl", "Closed all windows", 5, 1
 Return
+
+
+^!r::Reload  ; Assign Ctrl-Alt-R as a hotkey to restart the script.
 
 ^!w::
 {
@@ -730,7 +731,7 @@ Return
 
 ^!a::
 {
-SetKeyDelay, 0
+SetKeyDelay, 100
 
 DoWinKey()
 SetKeyDelay, 100
@@ -748,7 +749,7 @@ Return
 
 ^!t::
 {
-SetKeyDelay, 0
+SetKeyDelay, 100
 
 DoWinKey()
 SetKeyDelay, 100
@@ -765,10 +766,10 @@ Return
 
 ^!n::
 {
-SetKeyDelay, 0
+SetKeyDelay, 100
 
 DoWinKey()
-SetKeyDelay, 1
+SetKeyDelay, 10
 Sleep, 100
 Send, Notepad{+}{+}
 Sleep, 100
@@ -782,7 +783,7 @@ Return
 
 ^!i::
 {
-SetKeyDelay, 0
+SetKeyDelay, 100
 
 DoWinKey()
 SetKeyDelay, 10
