@@ -426,12 +426,12 @@ else if (ICC = 1)
 	Sleep, 4000
         SetKeyDelay, 100
 	Send, {TAB}
+	
 	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
-	SetKeyDelay, 10
 	Send, Ven
 	Sleep, 100
 	Send, {TAB}
@@ -621,7 +621,6 @@ else if (Friday= 1)
 	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
-	SetKeyDelay, 10
 	Send, Ven
 	Sleep, 100
 	Send, {TAB}
@@ -655,7 +654,6 @@ else if (T1 = 1)
 	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
-	SetKeyDelay, 10
 	Send, Ven
 	Sleep, 100
 	Send, {TAB}
@@ -690,7 +688,6 @@ else if (T3 = 1)
 	Sleep, 100
 	Send, {TAB}
 	Sleep, 100
-	SetKeyDelay, 10
 	Send, Ven
 	Sleep, 100
 	Send, {TAB}
