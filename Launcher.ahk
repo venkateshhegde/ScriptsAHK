@@ -5,7 +5,7 @@
 
 
 
-^+c::
+^!c::
 WinGet, id, list, , , Program Manager
 Loop, %id%
 {
@@ -19,7 +19,7 @@ Return
 
 ^!r::Reload  ; Assign Ctrl-Alt-R as a hotkey to restart the script.
 
-^+w::
+^!w::
 {
 SetKeyDelay, 100
 Send {CTRL down}{ALT down}z{CTRL up}{ALT up}
@@ -31,7 +31,7 @@ TrayTip, "VenControl", "Webex Sessions...", 5, 1
 Return
 }
 
-^+g::
+^!g::
 {
 SetKeyDelay, 100
 Send {CTRL down}{ALT down}z{CTRL up}{ALT up}
@@ -364,7 +364,7 @@ DoWork(MyEdit)
 	}
 }
 
-^+z::
+^!z::
 {
 
 Gui, Add, Tab2,, Google Search|Webex|Classroom|Websites  ; Tab2 vs. Tab requires v1.0.47.05.
