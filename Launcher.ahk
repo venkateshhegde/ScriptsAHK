@@ -1,4 +1,6 @@
-		
+MButton::AltTabMenu
+WheelDown::AltTab
+WheelUp::ShiftAltTab	
 		
 ^!c::
 WinGet, id, list, , , Program Manager
