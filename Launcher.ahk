@@ -52,6 +52,8 @@ DoWinKey()
 
 DoWork(MyEdit)
 {
+
+
         if (MyEdit = "cv")
 	{
 		Gui, Hide
@@ -60,6 +62,24 @@ DoWork(MyEdit)
 		Sleep, 100
 		SetKeyDelay, 1
 		Send, cme vdi
+		SetKeyDelay, 100
+		Sleep, 100
+		Send, {ENTER}
+		Sleep, 100
+		TrayTip, "VenControl", "Classroom..", 5, 1
+		Sleep, 2000
+		SetKeyDelay, 100
+		Send, {LWINDOWN}{Up}{Up}{LWINUP}
+		SetKeyDelay, 100
+	}
+	if (MyEdit = "va")
+	{
+		Gui, Hide
+		Sleep, 1000
+		DoWinKey()
+		Sleep, 100
+		SetKeyDelay, 1
+		Send, vanguard
 		SetKeyDelay, 100
 		Sleep, 100
 		Send, {ENTER}
