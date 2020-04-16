@@ -1,7 +1,10 @@
-MButton::AltTabMenu
-WheelDown::AltTab
-WheelUp::ShiftAltTab	
-		
+
+
+
+
+
+
+
 ^!c::
 WinGet, id, list, , , Program Manager
 Loop, %id%
@@ -67,15 +70,50 @@ DoWork(MyEdit)
 		Send, {LWINDOWN}{Up}{Up}{LWINUP}
 		SetKeyDelay, 100
 	}
-	
-	 if (MyEdit = "gd")
+	if (MyEdit = "ca")
 		{
 			Gui, Hide
 			Sleep, 1000
 			DoWinKey()
 			Sleep, 100
 			SetKeyDelay, 1
-			Send, google drive
+			Send, capital one
+			SetKeyDelay, 100
+			Sleep, 100
+			Send, {ENTER}
+			Sleep, 100
+			TrayTip, "VenControl", "Classroom..", 5, 1
+			Sleep, 2000
+			SetKeyDelay, 100
+			Send, {LWINDOWN}{Up}{Up}{LWINUP}
+			SetKeyDelay, 100
+	}
+	if (MyEdit = "we")
+		{
+			Gui, Hide
+			Sleep, 1000
+			DoWinKey()
+			Sleep, 100
+			SetKeyDelay, 1
+			Send, wealthfront
+			SetKeyDelay, 100
+			Sleep, 100
+			Send, {ENTER}
+			Sleep, 100
+			TrayTip, "VenControl", "Classroom..", 5, 1
+			Sleep, 2000
+			SetKeyDelay, 100
+			Send, {LWINDOWN}{Up}{Up}{LWINUP}
+			SetKeyDelay, 100
+	}
+	 if (MyEdit = "ci")
+		{
+			Gui, Hide
+			Sleep, 1000
+			DoWinKey()
+			Sleep, 100
+			SetKeyDelay, 1
+			Send, citi online
 			SetKeyDelay, 100
 			Sleep, 100
 			Send, {ENTER}
