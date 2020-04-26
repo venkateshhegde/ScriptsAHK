@@ -477,12 +477,12 @@ else if (Baris = 1)
 
 	SetKeyDelay, 100
 	Send {ALT down}d{ALT up}
-	Sleep, 400
+	Sleep, 2000
 	SetKeyDelay, 10
 	Send, https://cmeg.webex.com/meet/Baris.Mestanogullari
 	Sleep, 100
 	Send {ENTER}
-	Sleep, 4000
+	Sleep, 6000
         SetKeyDelay, 100
 	Send, {TAB}
 	Sleep, 100
@@ -513,14 +513,14 @@ else if (ICC = 1)
 	Send {CTRL down}{ALT down}i{CTRL up}{ALT up}
 	Sleep, 3000
 
-	SetKeyDelay, 10
+	SetKeyDelay, 100
 	Send {ALT down}d{ALT up}
-	Sleep, 400
+	Sleep, 2000
 	SetKeyDelay, 10
 	Send, https://cmeg.webex.com/cmeg/j.php?MTID=mb23f52b20feb03e68d074e79b67b09d0 %A_Space%
 	Sleep, 100
 	Send {ENTER}
-	Sleep, 4000
+	Sleep, 6000
         SetKeyDelay, 100
 
 	Send, {TAB}
@@ -555,7 +555,7 @@ else if (Yev = 1)
 	Send, https://cmeg.webex.com/meet/Yevgeniy.Brailovskiy
 	Sleep, 100
 	Send {ENTER}
-	Sleep, 4000
+	Sleep, 6000
         SetKeyDelay, 100
 	Send, {TAB}
 	Sleep, 100
@@ -595,7 +595,7 @@ else if (Alla = 1)
 	Send, https://cmeg.webex.com/meet/Alla.Layvant
 	Sleep, 100
 	Send {ENTER}
-	Sleep, 4000
+	Sleep, 6000
 
 	Send, {TAB}
 	Sleep, 100
@@ -634,7 +634,7 @@ else if (Stan = 1)
 	Send, https://cmeg.webex.com/meet/Stanislav.Liberman
 	Sleep, 100
 	Send {ENTER}
-	Sleep, 4000
+	Sleep, 6000
 
 	Send, {TAB}
 	Sleep, 100
@@ -673,7 +673,7 @@ else if (Fritz = 1)
 	Send, https://cmeg.webex.com/meet/Fritz.Caskey
 	Sleep, 100
 	Send {ENTER}
-	Sleep, 4000
+	Sleep, 6000
 
 	Send, {TAB}
 	Sleep, 100
@@ -742,7 +742,7 @@ else if (T1 = 1)
 	Send, https://cmeg.webex.com/cmeg/j.php?MTID=m11b3f73dab41277a8a0b34e6a2eda593  %A_Space%
 	Sleep, 100
 	Send {ENTER}
-	Sleep, 4000
+	Sleep, 6000
 	SetKeyDelay, 500
 	Send, {TAB}
 	Sleep, 100
@@ -774,7 +774,7 @@ else if (T3 = 1)
 	Send, https://cmeg.webex.com/cmeg/j.php?MTID=m4cca20da188f82a206882c840ab26b2f  %A_Space%
 	Sleep, 100
 	Send {ENTER}
-	Sleep, 4000
+	Sleep, 6000
 	SetKeyDelay, 500
 	Send, {TAB}
 	Sleep, 100
